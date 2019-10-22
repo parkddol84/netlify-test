@@ -1,17 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Route} from 'react-router-dom';
 
-function App() {
+import Menu from './components/Menu';
+import BluePage from './pages/BluePage';
+import RedPage from './pages/RedPage';
+
+const App = () => {
   return (
-    <div className="App">
-      
-          Learn Seungje
-        
+    <div>
+      <Menu/>
+      <hr/>
+      <Route path="/red" component={RedPage} />
+      <Route path="/blue" component={BluePage} />
     </div>
-  );
+  )
 }
 
 export default App;
-
-
